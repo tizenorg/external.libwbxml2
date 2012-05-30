@@ -6,6 +6,7 @@ Summary: Library to parse, encode and handle WBXML documents
 Group: System/Libraries
 License: LGPLv2.1
 Source0: %{name}-%{version}.tar.gz
+Source1001: packaging/libwbxml2.manifest 
 BuildRequires: expat-devel zlib-devel popt-devel
 BuildRequires: pkgconfig(libxml-2.0)
 BuildRequires: cmake
@@ -38,6 +39,7 @@ This package is libwbxml2-utils pkg for libwbxml2
 mkdir build
 
 %build
+cp %{SOURCE1001} .
 cd build
 cmake -DCMAKE_INSTALL_PREFIX=/usr ..
 make %{?jobs:-j%jobs}
@@ -59,12 +61,14 @@ rm -rf %{buildroot}
 
 
 %files
+%manifest libwbxml2.manifest
 %defattr(-,root,root,-)
 %{_bindir}/*
 %{_libdir}/*.so.*
 %doc %{_docdir}/*
 
 %files devel
+%manifest libwbxml2.manifest
 %defattr(-,root,root,-)
 /usr/include/libwbxml-1.0/wbxml/*.h
 /usr/include/wbxml_config.h
@@ -72,6 +76,7 @@ rm -rf %{buildroot}
 /usr/lib/pkgconfig/libwbxml2.pc
 
 %files utils
+%manifest libwbxml2.manifest
 %defattr(-,root,root,-)
 %{_bindir}/*
 
