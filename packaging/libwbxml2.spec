@@ -30,8 +30,8 @@ Summary: Binary XML utilities %{name}-utils
 Group: Development/Libraries
 Requires: %{name} = %{version}-%{release}
 
-%description utils    
-This package is libwbxml2-utils pkg for libwbxml2  
+%description utils
+This package is libwbxml2-utils pkg for libwbxml2
 
 %prep
 %setup -q
@@ -47,6 +47,8 @@ make %{?jobs:-j%jobs}
 rm -rf %{buildroot}
 cd build
 %make_install
+mkdir -p %{buildroot}/usr/share/license
+cp %{_builddir}/%{name}-%{version}/COPYING  %{buildroot}/usr/share/license/%{name}
 
 
 %clean
@@ -63,6 +65,7 @@ rm -rf %{buildroot}
 %{_bindir}/*
 %{_libdir}/*.so.*
 %doc %{_docdir}/*
+/usr/share/license/%{name}
 
 %files devel
 %defattr(-,root,root,-)
