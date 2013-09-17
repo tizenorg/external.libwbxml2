@@ -1,3 +1,11 @@
+wbxml2 (0.11.1) unstable; urgency=low
+
+  * 1. Tizen SDK licence file add.
+  * Git: tizen/pkgs/l/libwbxml2
+  * Tag: libwbxml2_0.11.1
+
+ -- sanghyukko <sanghyuk.ko@samsung.com>  Tue, 17 Sep 2013 16:31:47 +0900
+
 wbxml2 (0.11.0-1slp2) unstable; urgency=low
  
   * Upgrade wbxml version to 0.11.0
