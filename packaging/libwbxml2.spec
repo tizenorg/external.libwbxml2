@@ -48,6 +48,9 @@ rm -rf %{buildroot}
 cd build
 %make_install
 
+mkdir -p %{buildroot}/usr/share/license
+cp %{_builddir}/%{name}-%{version}/GNU-LGPL %{buildroot}/usr/share/license/%{name}
+
 
 %clean
 cd build
@@ -59,10 +62,12 @@ rm -rf %{buildroot}
 
 
 %files
+%manifest libwbxml2.manifest
 %defattr(-,root,root,-)
 %{_bindir}/*
 %{_libdir}/*.so.*
 %doc %{_docdir}/*
+/usr/share/license/%{name}
 
 %files devel
 %defattr(-,root,root,-)
@@ -72,6 +77,7 @@ rm -rf %{buildroot}
 /usr/lib/pkgconfig/libwbxml2.pc
 
 %files utils
+%manifest libwbxml2.manifest
 %defattr(-,root,root,-)
 %{_bindir}/*
 
