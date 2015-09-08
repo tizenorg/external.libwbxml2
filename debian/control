@@ -1,7 +1,7 @@
 Source: wbxml2
 Priority: optional
 Section: libs
-Maintainer: Joohark Park <juhaki.park@samsung.com>, Byonguk Lee <byonguk.lee@samsung.com>
+Maintainer: WooJin Yun <suhoangel9@samsung.com>, Joohark Park <juhaki.park@samsung.com>, Byonguk Lee <byonguk.lee@samsung.com>
 Homepage: http://libwbxml.opensync.org/
 Build-Depends: debhelper (>= 5.0.0), cdbs, check, libexpat1-dev | libexpat-dev, popt-dev, zlib1g-dev | libz-dev
 Standards-Version: 3.8.3

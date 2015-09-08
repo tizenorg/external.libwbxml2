@@ -1,11 +1,11 @@
-%define _name libwbxml
-Name: libwbxml2
-Version: 0.11.0
-Release: 10
-Summary: Library to parse, encode and handle WBXML documents
-Group: System/Libraries
-License: LGPLv2.1
-Source0: %{name}-%{version}.tar.gz
+#sbs-git:slp/pkgs/l/libwbxml2 libwbxml2 0.11.0 06ce77fab109724e1aa6f14ea0edf4760a4d7889
+Name:          libwbxml2
+Version:       0.11.1
+Release:       1
+Summary:       Library to parse, encode and handle WBXML documents
+Group:         System/Libraries
+License:       LGPL-2.1+
+Source0:       %{name}-%{version}.tar.gz
 BuildRequires: expat-devel zlib-devel popt-devel
 BuildRequires: pkgconfig(libxml-2.0)
 BuildRequires: cmake
@@ -48,6 +48,9 @@ rm -rf %{buildroot}
 cd build
 %make_install
 
+mkdir -p %{buildroot}/usr/share/license
+cp %{_builddir}/%{name}-%{version}/GNU-LGPL %{buildroot}/usr/share/license/%{name}
+
 
 %clean
 cd build
@@ -59,10 +62,12 @@ rm -rf %{buildroot}
 
 
 %files
+%manifest libwbxml2.manifest
 %defattr(-,root,root,-)
 %{_bindir}/*
 %{_libdir}/*.so.*
 %doc %{_docdir}/*
+/usr/share/license/%{name}
 
 %files devel
 %defattr(-,root,root,-)
@@ -72,6 +77,7 @@ rm -rf %{buildroot}
 /usr/lib/pkgconfig/libwbxml2.pc
 
 %files utils
+%manifest libwbxml2.manifest
 %defattr(-,root,root,-)
 %{_bindir}/*
 

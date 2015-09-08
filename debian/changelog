@@ -1,7 +1,24 @@
+wbxml2 (0.11.1) unstable; urgency=low
+
+  * Upgrade wbxml version to 0.11.1
+  * Git: slp/pkgs/l/libwbxml2
+  * Tag: wbxml2_0.11.1
+
+ -- Sunbong Ha <sunbong.ha@samsung.com>  Tue, 12 Jun 2012 11:18:29 +0900
+
+wbxml2 (0.11.0-2slp2) unstable; urgency=low
+
+  * Remove cmake dependency.
+  * Modify repository path.
+  * Git: slp/pkgs/l/libwbxml2
+  * Tag: wbxml2_0.11.0-2slp2
+
+ -- ByongUk Lee <byonguk.lee@samsung.com>  Mon, 19 Dec 2011 10:56:17 +0900
+
 wbxml2 (0.11.0-1slp2) unstable; urgency=low
  
   * Upgrade wbxml version to 0.11.0
-  * Git: tizen/pkgs/l/libwbxml2
+  * Git: slp/pkgs/l/libwbxml2
   * Tag: wbxml2_0.11.0-1slp2
  
  -- Byonguk Lee <byonguk.lee@samsung.com>  Tue, 13 Dec 2011 10:50:00 +0000
