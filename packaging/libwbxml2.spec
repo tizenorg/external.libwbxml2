@@ -1,11 +1,11 @@
 #sbs-git:slp/pkgs/l/libwbxml2 libwbxml2 0.11.0 06ce77fab109724e1aa6f14ea0edf4760a4d7889
-Name:          libwbxml2
-Version:       0.11.1
-Release:       1
-Summary:       Library to parse, encode and handle WBXML documents
-Group:         System/Libraries
-License:       LGPL-2.1+
-Source0:       %{name}-%{version}.tar.gz
+Name: libwbxml2
+Version: 0.11.1
+Release: 1
+Summary: Library to parse, encode and handle WBXML documents
+Group: System/Libraries
+License: LGPL-2.1+
+Source0: %{name}-%{version}.tar.gz
 BuildRequires: expat-devel zlib-devel popt-devel
 BuildRequires: pkgconfig(libxml-2.0)
 BuildRequires: cmake
